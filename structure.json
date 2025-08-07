@@ -1,0 +1,88 @@
+[    
+    {
+        "Name": "version",
+        "RequiresValue": false,
+        "HasChildren": false,
+        "RequiresChildren": false,
+        "MaxArgs": 0,
+        "Aliases": ["v"]
+    },
+    {
+        "Name": "help",
+        "RequiresValue": false,
+        "HasChildren": true,
+        "RequiresChildren": false,
+        "MaxArgs": 1,
+        "Aliases": ["h"],
+        "Children": [
+            {
+                "Name": "task",
+                "RequiresValue": false,
+                "HasChildren": false,
+                "RequiresChildren": false,
+                "MaxArgs": 0
+            },
+            {
+                "Name": "project",
+                "RequiresValue": false,
+                "HasChildren": false,
+                "RequiresChildren": false,
+                "MaxArgs": 0
+            }
+        ]
+    },
+    {
+        "Name": "task",
+        "RequiresValue": false,
+        "HasChildren": true,
+        "RequiresChild": true,
+        "MaxArgs": -1,
+        "Aliases": ["t"],
+        "Children": [
+            {
+                "Name": "add",
+                "RequiresValue": true,
+                "HasChildren": true,
+                "RequiresChild": false,
+                "MaxArgs": 1,
+                "Aliases": ["a"],
+                "Children": [
+                    {
+                        "Name": "description",
+                        "RequiresValue": false,
+                        "HasChildren": false,
+                        "RequiresChild": false,
+                        "MaxArgs": 0,
+                        "Aliases": ["--desc"]
+                    }
+                ]
+            },
+            {
+                "Name": "delete",
+                "RequiresValue": true,
+                "HasChildren": true,
+                "RequiresChild": false,
+                "MaxArgs": 1,
+                "Children": [
+                    {
+                        "Name": "all",
+                        "RequiresValue": false,
+                        "HasChildren": false,
+                        "RequiresChild": false,
+                        "MaxArgs": -1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "project",
+        "RequiresValue": false,
+        "HasChildren": true,
+        "RequiresChild": true,
+        "MaxArgs": -1,
+        "Aliases": ["p"],
+        "Children": [
+        ]
+    }
+]
